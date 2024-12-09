@@ -21,12 +21,40 @@ section {
     padding: 2rem;
 }
 
-section:nth-child(even) {
-    background-color: aquamarine;
-}
-
 #Plaid {
-
+    --plaid-1: #88FFAA88;
+    background-image: 
+        linear-gradient(
+            175deg,
+            transparent 15%,
+            var(--plaid-1) 15%,
+            var(--plaid-1) 18%,
+            transparent 18%,
+            transparent 20%,
+            var(--plaid-1) 20%,
+            var(--plaid-1) 25%,
+            transparent 25%,
+            transparent 30%,
+            var(--plaid-1) 30%,
+            var(--plaid-1) 40%,
+            transparent 40%
+        ),
+        linear-gradient(
+            85deg,
+            transparent 15%,
+            var(--plaid-1) 15%,
+            var(--plaid-1) 18%,
+            transparent 18%,
+            transparent 20%,
+            var(--plaid-1) 20%,
+            var(--plaid-1) 25%,
+            transparent 25%,
+            transparent 30%,
+            var(--plaid-1) 30%,
+            var(--plaid-1) 40%,
+            transparent 40%
+        )
+    ;
 }
 
 #TransparentCircles {
