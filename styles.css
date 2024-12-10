@@ -13,12 +13,88 @@ h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     margin: 5rem auto;
+    
 }
 
 section {
     min-height: 100vh;
     border: 2px solid black;
-    padding: 2rem;
+}
+
+hgroup {padding: 3rem;}
+
+#Home {
+    --darkest: #883333;
+    --darker: #FF8888;
+    --lighter: #FF888888;
+    background-image: 
+        linear-gradient(
+            var(--darkest),
+            transparent 7vh,
+            transparent 93vh,
+            var(--darkest)
+        ),
+        linear-gradient(
+            to right,
+            var(--darkest),
+            transparent 7vh,
+            transparent 93vh,
+            var(--darkest)
+        ),
+        linear-gradient(
+            to left top,
+            var(--darker) 24.5%,
+            var(--lighter) 24.5%,
+            var(--lighter) 25%,
+
+            var(--darker) 25%,
+            var(--darker) 42%,
+
+            var(--lighter) 42%,
+            var(--darker) 42.5%,
+            var(--lighter) 43%,
+
+            var(--darker) 43%,
+            var(--darker) 44%,
+
+            var(--lighter) 44%,
+            var(--darker) 45.5%,
+            var(--lighter) 47%,
+
+            var(--darker) 47%,
+            var(--darker) 50%, 
+            
+            var(--lighter) 50%, 
+            var(--lighter) 53%,
+
+            var(--darker) 53%,
+            var(--lighter) 54.5%,
+            var(--darker) 56%,
+
+            var(--lighter) 56%,
+            var(--lighter) 57%,
+
+            var(--darker) 57%,
+            var(--lighter) 57.5%,
+            var(--darker) 58%,
+
+            var(--lighter) 58%,
+            var(--lighter) 75%,
+
+            var(--darker) 75%,
+            var(--darker) 75.5%,
+            var(--lighter) 75.5%
+        )
+    ;
+}
+
+#Home h1 {
+    text-shadow: 0px 0px 5px var(--darker);
+}
+
+#Home a {
+    background-color: #FFFFFF55;
+    border-radius: 5px;
 }
 
 #Plaid {
