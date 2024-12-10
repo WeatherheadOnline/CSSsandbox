@@ -8,20 +8,14 @@ body {
     padding: 0;
 }
 
-h1 {
-    font-size: 3rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    margin: 5rem auto;
-    
-}
-
 section {
     min-height: 100vh;
     border: 2px solid black;
 }
 
 hgroup {padding: 3rem;}
+
+/* *******   Landing section: #Home    ********** */
 
 #Home {
     --darkest: #883333;
@@ -88,8 +82,13 @@ hgroup {padding: 3rem;}
     ;
 }
 
-#Home h1 {
+h1 {
     text-shadow: 0px 0px 5px var(--darker);
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    margin: 5rem auto;
+
 }
 
 #Home a {
@@ -97,9 +96,36 @@ hgroup {padding: 3rem;}
     border-radius: 5px;
 }
 
+/* *******  Plaid section  ********** */
+
+
 #Plaid {
-    --plaid-1: #88FFAA88;
+    --plaid-1: #00FF8855;
+    --plaid-2: #0055FF55;
+    --plaid-3: #00000055;
+    /* text-shadow: 0px 0px 3px white, 0 0 10px black; */
+    text-shadow: 0px 0px 10px black, 0 0 3px white;
     background-image: 
+        linear-gradient(
+            85deg,
+            transparent 15%,
+            var(--plaid-3) 15%,
+            var(--plaid-3) 18%,
+            transparent 18%,
+            transparent 20%,
+            var(--plaid-2) 20%,
+            var(--plaid-2) 25%,
+            transparent 25%,
+            transparent 30%,
+            var(--plaid-1) 30%,
+            var(--plaid-1) 40%,
+            transparent 40%,
+            transparent 44%,
+            var(--plaid-2) 44%,
+            var(--plaid-2) 45%,
+            transparent 45%
+
+        ),
         linear-gradient(
             175deg,
             transparent 15%,
@@ -107,28 +133,17 @@ hgroup {padding: 3rem;}
             var(--plaid-1) 18%,
             transparent 18%,
             transparent 20%,
-            var(--plaid-1) 20%,
-            var(--plaid-1) 25%,
+            var(--plaid-2) 20%,
+            var(--plaid-2) 25%,
             transparent 25%,
             transparent 30%,
-            var(--plaid-1) 30%,
-            var(--plaid-1) 40%,
-            transparent 40%
-        ),
-        linear-gradient(
-            85deg,
-            transparent 15%,
-            var(--plaid-1) 15%,
-            var(--plaid-1) 18%,
-            transparent 18%,
-            transparent 20%,
-            var(--plaid-1) 20%,
-            var(--plaid-1) 25%,
-            transparent 25%,
-            transparent 30%,
-            var(--plaid-1) 30%,
-            var(--plaid-1) 40%,
-            transparent 40%
+            var(--plaid-3) 30%,
+            var(--plaid-3) 40%,
+            transparent 40%,
+            transparent 44%,
+            var(--plaid-1) 44%,
+            var(--plaid-1) 45%,
+            transparent 45%
         )
     ;
 }
