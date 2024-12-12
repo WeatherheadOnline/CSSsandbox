@@ -255,63 +255,62 @@ h1 {
     position: relative;
     outline: 5px solid white;
     height: 50vh;
-    width: 78vw;
+    width: 90vw;
     margin: 10vh auto;
 }
 
 .irid {
     height: 50vh;
-    width: 18vw;
+    width: 30vw;
     position: absolute;
-    opacity: 0.5;
-    visibility: hidden;
+    opacity: 0;
 }
 
 #red {
     background-image: radial-gradient(
         #FF0000 20%,
-        transparent
+        transparent 80%
     );
     left: 0;}
 
 #orange {
     background-image: radial-gradient(
         #ff6000 20%,
-        transparent
+        transparent 80%
     );
     left: 10vw;}
 
 #yellow {
     background-image: radial-gradient(
         #FFFF00 20%,
-        transparent
+        transparent 80%
     );
     left: 20vw;}
 
 #green {
     background-image: radial-gradient(
         #00FF00 20%,
-        transparent
+        transparent 80%
     );
     left: 30vw;}
 
 #cyan {
     background-image: radial-gradient(
         #00FFFF 20%,
-        transparent
+        transparent 80%
     );
     left: 40vw;}
 
 #blue {
     background-image: radial-gradient(
         #0000FF 20%,
-        transparent
+        transparent 80%
     );
     left: 50vw;}
 
 #magenta {
     background-image: radial-gradient(
         #FF00FF 20%,
-        transparent
+        transparent 80%
     );
     left: 60vw;}
