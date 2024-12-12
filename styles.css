@@ -243,3 +243,75 @@ h1 {
     );
     border-radius: 50%;
 }
+
+/* *******  Peacock feather iridesence section  ********** */
+
+#Peacock {
+    color: white;
+    background-color: #111111;
+}
+
+#container {
+    position: relative;
+    outline: 5px solid white;
+    height: 50vh;
+    width: 78vw;
+    margin: 10vh auto;
+}
+
+.irid {
+    height: 50vh;
+    width: 18vw;
+    position: absolute;
+    opacity: 0.5;
+    visibility: hidden;
+}
+
+#red {
+    background-image: radial-gradient(
+        #FF0000 20%,
+        transparent
+    );
+    left: 0;}
+
+#orange {
+    background-image: radial-gradient(
+        #ff6000 20%,
+        transparent
+    );
+    left: 10vw;}
+
+#yellow {
+    background-image: radial-gradient(
+        #FFFF00 20%,
+        transparent
+    );
+    left: 20vw;}
+
+#green {
+    background-image: radial-gradient(
+        #00FF00 20%,
+        transparent
+    );
+    left: 30vw;}
+
+#cyan {
+    background-image: radial-gradient(
+        #00FFFF 20%,
+        transparent
+    );
+    left: 40vw;}
+
+#blue {
+    background-image: radial-gradient(
+        #0000FF 20%,
+        transparent
+    );
+    left: 50vw;}
+
+#magenta {
+    background-image: radial-gradient(
+        #FF00FF 20%,
+        transparent
+    );
+    left: 60vw;}
