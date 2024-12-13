@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <svg class="defs" width="30mm" height="29mm" viewBox="0 0 30 29" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <mask id="ogeeMask">
+                <path
+                style="stroke-width:1; fill:white;"
+                d="M 0.49981741,14.499862 C 0.46985526,7.3060918 14.968533,7.2403051 15.000022,0.00258276 14.961597,7.2366676 29.500237,7.3478553 29.500227,14.499862 c 0,7.151998 -14.54261,7.307137 -14.500205,14.49727 -0.02121,-7.19377 -14.4702327,-7.303499 -14.50020459,-14.49727 z" />
+            </mask>
+        </defs>
+    </svg>    
+
     <section id="Home">
         <hgroup></hgroup>
             <h1>Hello. This is a place for testing CSS designs.</h1>
@@ -14,6 +24,7 @@
                 <p><a href="#TransparentCircles">Transparent circle pattern overlay</a></p>
                 <p><a href="#Pinstripe">Diagonal pinstripes</a></p>
                 <p><a href="#Peacock">Iridescence</a></p>
+                <!-- <p><a href="#Ogee">Ogee pattern</a></p> -->
             </nav>
         </hgroup>
     </section>
@@ -23,6 +34,7 @@
             <p><a href="#Home">Home</a></p>
         </hgroup>
     </section>
+
     <section id="TransparentCircles">
         <hgroup>
             <h2>This is set up to hold a repeating background of a transparent circle on a solid background.</h2>
@@ -37,15 +49,13 @@
             <p><a href="#Home">Home</a></p>
         </hgroup>
     </section>
+
     <section id="Peacock">
         <hgroup>
             <h2>This section is set up for testing iridescence.</h2>
             <p><a href="#Home">Home</a></p>
         </hgroup>
         <div id="container">
-            <!-- <div class="irid" id="red"></div> -->
-            <!-- <div class="irid" id="orange"></div> -->
-            <!-- <div class="irid" id="yellow"></div> -->
             <div class="irid" id="green"></div>
             <div class="irid" id="cyan"></div>
             <div class="irid" id="blue"></div>
@@ -53,5 +63,15 @@
         </div>
         <script src="peacock.js"></script>
     </section>
+
+    <!-- <section id="Ogee">
+        <div id="ogeeContainer"><img src="clouds.jpg"></div>
+        <div id="ogeeContainer"></div>
+        <hgroup>
+            <h2>This is set up to hold an ogee patterned background.</h2>
+            <p><a href="#Home">Home</a></p>
+        </hgroup>
+    </section> -->
+
 </body>
 </html>
