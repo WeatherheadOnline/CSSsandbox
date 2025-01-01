@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet"></head>
 <body>
     <svg class="defs" width="30mm" height="29mm" viewBox="0 0 30 29" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -25,6 +27,7 @@
                 <p><a href="#Pinstripe">Diagonal pinstripes</a></p>
                 <p><a href="#Peacock">Iridescence</a></p>
                 <!-- <p><a href="#Ogee">Ogee pattern</a></p> -->
+                <p><a href="#stairs">Staircase pattern</a></p>
             </nav>
         </hgroup>
     </section>
@@ -39,30 +42,54 @@
         <hgroup>
             <h2>This is set up to hold a repeating background of a transparent circle on a solid background.</h2>
             <p><a href="#Home">Home</a></p>
-            <p>The circles would allow visibility of a lower background, eg a photo or texture.</p>
+            <p>The circles would allow visibility of an underlying background, eg a photo or texture.</p>
         </hgroup>
         <div id="clouds"></div>
     </section>
     <section id="Pinstripe">
         <hgroup>
-            <h2>This is set up to hold a background of dark diagonal lines overlaid with black vignette.</h2>
+            <h2>This is set up to hold a background of dark diagonal lines overlaid with black vignette effect.</h2>
             <p><a href="#Home">Home</a></p>
         </hgroup>
     </section>
 
     <section id="Peacock">
+
+        <svg width="0" height="0">
+            <defs>
+                <clipPath id="ogee" clipPathUnits="objectBoundingBox">
+                    <path style="fill:#000000;"
+                        d="M 0,0.5 C 0,0.25189 0.4989115,0.24962 0.5000015,0 c -0.001,0.2495 0.5,0.25333 0.5,0.5 0,0.24667 -0.50146,0.25202 -0.5,0.5 C 0.4992715,0.75189 0.0010415,0.74811 0,0.5 Z" />
+                </clipPath>
+            </defs>
+        </svg>
+        
         <hgroup>
             <h2>This section is set up for testing iridescence.</h2>
+            <p>Hint: move your mouse.</p>
             <p><a href="#Home">Home</a></p>
         </hgroup>
-        <div id="container">
-            <div class="irid" id="green"></div>
-            <div class="irid" id="cyan"></div>
-            <div class="irid" id="blue"></div>
-            <div class="irid" id="magenta"></div>
+        <div id="holoOuter">
+            <div id="holoInner">
+                <div class="irid" id="green"></div>
+                <div class="irid" id="cyan"></div>
+                <div class="irid" id="blue"></div>
+                <div class="irid" id="magenta"></div>
+            </div>
         </div>
         <script src="peacock.js"></script>
     </section>
+
+    <section id="stairs">
+        <hgroup>
+            <h2>This section is set up for testing a staircase background pattern.</h2>
+            <p><a href="#Home">Home</a></p>
+        </hgroup>
+        <div id="stairsContainer"></div>
+        <script src="stairs.js"></script>
+    </section>
+
+
 
     <!-- <section id="Ogee">
         <div id="ogeeContainer"><img src="clouds.jpg"></div>
