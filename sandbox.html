@@ -6,64 +6,34 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+</head>
+
 <body>
-    <svg class="defs" width="30mm" height="29mm" viewBox="0 0 30 29" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <mask id="ogeeMask">
-                <path
-                style="stroke-width:1; fill:white;"
-                d="M 0.49981741,14.499862 C 0.46985526,7.3060918 14.968533,7.2403051 15.000022,0.00258276 14.961597,7.2366676 29.500237,7.3478553 29.500227,14.499862 c 0,7.151998 -14.54261,7.307137 -14.500205,14.49727 -0.02121,-7.19377 -14.4702327,-7.303499 -14.50020459,-14.49727 z" />
-            </mask>
-        </defs>
-    </svg>    
 
     <section id="Home">
         <hgroup></hgroup>
             <h1>Hello. This is a place for testing CSS designs.</h1>
             <nav>
+                <p><a href="#Peacock">Iridescence</a></p>
+                <p><a href="#Ogee">Ogee pattern</a></p>
+                <p><a href="#Stairs">Staircase pattern</a></p>
+                <p><a href="#Pinstripe">Diagonal pinstripes</a></p>
                 <p><a href="#Plaid">Plaid</a></p>
                 <p><a href="#TransparentCircles">Transparent circle pattern overlay</a></p>
-                <p><a href="#Pinstripe">Diagonal pinstripes</a></p>
-                <p><a href="#Peacock">Iridescence</a></p>
-                <!-- <p><a href="#Ogee">Ogee pattern</a></p> -->
-                <p><a href="#stairs">Staircase pattern</a></p>
             </nav>
-        </hgroup>
-    </section>
-    <section id="Plaid">
-        <hgroup>
-            <h2>This is set up to hold a plaid background.</h2>
-            <p><a href="#Home">Home</a></p>
-        </hgroup>
-    </section>
-
-    <section id="TransparentCircles">
-        <hgroup>
-            <h2>This is set up to hold a repeating background of a transparent circle on a solid background.</h2>
-            <p><a href="#Home">Home</a></p>
-            <p>The circles would allow visibility of an underlying background, eg a photo or texture.</p>
-        </hgroup>
-        <div id="clouds"></div>
-    </section>
-    <section id="Pinstripe">
-        <hgroup>
-            <h2>This is set up to hold a background of dark diagonal lines overlaid with black vignette effect.</h2>
-            <p><a href="#Home">Home</a></p>
         </hgroup>
     </section>
 
     <section id="Peacock">
-
         <svg width="0" height="0">
             <defs>
-                <clipPath id="ogee" clipPathUnits="objectBoundingBox">
+                <clipPath id="stairOgee" clipPathUnits="objectBoundingBox">
                     <path style="fill:#000000;"
                         d="M 0,0.5 C 0,0.25189 0.4989115,0.24962 0.5000015,0 c -0.001,0.2495 0.5,0.25333 0.5,0.5 0,0.24667 -0.50146,0.25202 -0.5,0.5 C 0.4992715,0.75189 0.0010415,0.74811 0,0.5 Z" />
                 </clipPath>
             </defs>
         </svg>
-        
         <hgroup>
             <h2>This section is set up for testing iridescence.</h2>
             <p>Hint: move your mouse.</p>
@@ -80,25 +50,49 @@
         <script src="peacock.js"></script>
     </section>
 
-    <section id="stairs">
+    <section id="Ogee">
+        <hgroup>
+            <h2>This is set up to hold an ogee patterned background.</h2>
+            <p><a href="#Home">Home</a></p>
+        </hgroup>
+        <div id="ogeeOuter">
+            <div id="ogeeInner"></div>
+        </div>
+    </section>
+
+    <section id="Stairs">
         <hgroup>
             <h2>This section is set up for testing a staircase background pattern.</h2>
+            <p>It's a bit loud and would need to be used in moderation and/or elements would need an opaque background.</p>
             <p><a href="#Home">Home</a></p>
+            <button id="stairsToggle">Toggle animation</button>
         </hgroup>
         <div id="stairsContainer"></div>
         <script src="stairs.js"></script>
     </section>
 
-
-
-    <!-- <section id="Ogee">
-        <div id="ogeeContainer"><img src="clouds.jpg"></div>
-        <div id="ogeeContainer"></div>
+    <section id="Pinstripe">
         <hgroup>
-            <h2>This is set up to hold an ogee patterned background.</h2>
+            <h2>This is set up to hold a background of dark diagonal lines overlaid with black vignette effect.</h2>
             <p><a href="#Home">Home</a></p>
         </hgroup>
-    </section> -->
+    </section>
+
+    <section id="Plaid">
+        <hgroup>
+            <h2>This is set up to hold a plaid background.</h2>
+            <p><a href="#Home">Home</a></p>
+        </hgroup>
+    </section>
+
+    <section id="TransparentCircles">
+        <hgroup>
+            <h2>This is set up to hold a repeating background of a transparent circle on a solid background.</h2>
+            <p><a href="#Home">Home</a></p>
+            <p>The circles would allow visibility of an underlying background, eg a photo or texture.</p>
+        </hgroup>
+        <div id="clouds"></div>
+    </section>
 
 </body>
 </html>

@@ -36,3 +36,23 @@ while (i <= countWidth * countHeight) {
     stair.appendChild(box);
     i++;
 }
+
+const boxes = document.getElementsByClassName("stairBox");
+let toggle = true; 
+document.getElementById("stairsToggle").addEventListener("click", toggleAnimation); 
+
+function toggleAnimation() {
+    if (toggle == true) {
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].style.animation = "none";
+        }
+        // document.getElementsByClassName("stairBox").style.animation = "none";
+        toggle = false;
+    } else {
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].style.animation = "stairStrobe 1s linear infinite";
+        }
+        // document.getElementsByClassName("stairBox").style.animation = "stairStrobe 1s linear infinite";
+        toggle = true;
+    }
+}
