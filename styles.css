@@ -108,6 +108,67 @@ h1 {
 }
 
 
+
+
+/* ********************************** */
+/* *******  OrgGeo1 section  ******** */
+/* ********************************** */
+
+#OrgGeo1 {
+    background-color: #b6e145;
+}
+
+#OrgGeo1bkgd {
+    background-color: #c9e976;
+    mask-image: url(img/OrgGeo1_bkgd.svg);
+    mask-repeat: repeat;
+    mask-position: -35px -35px;
+}
+
+#OrgGeo1 > hgroup > h2 {
+    color: #bf23dc;
+    text-shadow: 4px 4px 0 #5a23dc;
+    font-family: "Great Vibes", serif;
+    font-size: 7rem;
+    transform: rotate(-8deg);
+}
+
+#OrgGeo1 a {
+    color: #450dc7;
+}
+
+
+/* ********************************** */
+/* *******  OrgGeo2 section  ******** */
+/* ********************************** */
+
+#OrgGeo2 {
+    background-color: #1e008a;
+}
+
+#OrgGeo2bkgd {
+    background-color: #120073;
+    mask-image: url(img/OrgGeo2_bkgd.svg);
+    mask-repeat: repeat;
+    mask-position: -35px -35px;
+}
+
+#OrgGeo2 > hgroup > h2 {
+    color: #FFFFFF;
+    text-shadow: 3px 3px 0 #FFFF00;
+    font-family: "Times New Roman";
+    font-style: italic;
+    font-weight: bold;
+    font-size: 8rem;
+    transform: rotate(-8deg);
+}
+
+#OrgGeo2 a {
+    color: #FFFF00;
+}
+
+
+
 /* ********************************** */
 /* *******  Plaid section  ********** */
 /* ********************************** */
@@ -170,7 +231,7 @@ h1 {
 #TransparentCircles {
     position: relative;
     background-image: 
-        url(circleMask.svg),
+        url(img/circleMask.svg),
         linear-gradient(
             #91d9edFF,
             #91d9ed88 7vh,
@@ -195,7 +256,7 @@ h1 {
     top: 0;
     left: 0;
     z-index: -1;
-    background-image: url(clouds.jpg);
+    background-image: url(img/clouds.jpg);
     background-repeat: repeat;
     /* background-size: cover; */
 }
@@ -576,12 +637,11 @@ h1 {
     height: calc(100vh + 50px);
     top: -25px;
     left: 0;
-    background-image: url(ogeeGradient.svg);
+    background-image: url(img/ogeeGradient.svg);
     background-size: 50px;
     background-repeat: repeat;
     z-index: -1;
 }
 
-#ogeeContainer img {}
 
 
