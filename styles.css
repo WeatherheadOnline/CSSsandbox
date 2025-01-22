@@ -17,17 +17,27 @@ hgroup {padding: 3rem;}
 
 a {font-weight: bold; color: black;}
 
+p {font-weight: bold;}
+
+@media (any-hover: none) and (orientation: landscape) {
+    hgroup {
+        padding: 1rem 3rem;
+    }
+}
+
+footer {
+    height: max-content;
+    padding: 1rem;
+}
 
 /* ********************************************** */
 /* *******   Landing section: #Home    ********** */
 /* ********************************************** */
 
 #Home {
-    --darkest: #88333388;
-    --darker: #FF8888;
-    --lighter: #FF888888;
-    --font: #270707;
-    color: var(--font);
+    --darkest: #6a338888;
+    --darker: #b782ff;
+    --lighter: #f983fd88;
     background-image: 
         linear-gradient(
             var(--darkest),
@@ -44,70 +54,84 @@ a {font-weight: bold; color: black;}
         ),
         linear-gradient(
             to left top,
-            var(--darker) 24.5%,
+            var(--darker) 24.4%,
             var(--lighter) 24.5%,
             var(--lighter) 25%,
 
-            var(--darker) 25%,
+            var(--darker) 25.1%,
             var(--darker) 42%,
 
-            var(--lighter) 42%,
+            var(--lighter) 42.1%,
             var(--darker) 42.5%,
             var(--lighter) 43%,
 
-            var(--darker) 43%,
+            var(--darker) 43.1%,
             var(--darker) 44%,
 
-            var(--lighter) 44%,
+            var(--lighter) 44.1%,
             var(--darker) 45.5%,
             var(--lighter) 47%,
 
-            var(--darker) 47%,
+            var(--darker) 47.1%,
             var(--darker) 50%, 
             
-            var(--lighter) 50%, 
+            var(--lighter) 50.1%, 
             var(--lighter) 53%,
 
-            var(--darker) 53%,
+            var(--darker) 53.1%,
             var(--lighter) 54.5%,
             var(--darker) 56%,
 
-            var(--lighter) 56%,
+            var(--lighter) 56.1%,
             var(--lighter) 57%,
 
-            var(--darker) 57%,
+            var(--darker) 57.1%,
             var(--lighter) 57.5%,
             var(--darker) 58%,
 
-            var(--lighter) 58%,
+            var(--lighter) 58.1%,
             var(--lighter) 75%,
 
-            var(--darker) 75%,
+            var(--darker) 75.1%,
             var(--darker) 75.5%,
-            var(--lighter) 75.5%
+            var(--lighter) 75.6%
         )
     ;
 }
 
 h1 {
     text-shadow: 0px 0px 5px var(--darker);
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
-    margin: 5rem auto;
-    padding: 0 15vw;
+    margin: 3rem auto 3rem auto;
+}
 
+h1, #Home a {
+    color: #110539;
 }
 
 #Home a {
-    background-color: #FFFFFF55;
+    background-color: #FFFFFF44;
     padding: 0.2rem;
     border-radius: 5px;
-    box-shadow: 0 0 8px white;
-    text-shadow: 0 0 2px #00000088;
+    box-shadow: 0 0 8px #FFFFFF;
+    text-shadow: 0 0 2px #11053988, 0 0 5px #FFFFFF;
 }
 
+@media (any-hover: none) and (orientation: landscape) {
+    h1 {
+        margin: 5rem auto 3rem auto;
+    }
+}
 
+@media (hover) {
+    h1 {
+        font-size: 3rem;
+        margin: 5rem auto;
+        padding: 0 3rem;
+    }
+}
 
 
 /* ********************************** */
@@ -115,26 +139,45 @@ h1 {
 /* ********************************** */
 
 #OrgGeo1 {
-    background-color: #b6e145;
+    background-color: #c9e976;
+    position: relative;
 }
 
 #OrgGeo1bkgd {
-    background-color: #c9e976;
-    mask-image: url(img/OrgGeo1_bkgd.svg);
-    mask-repeat: repeat;
-    mask-position: -35px -35px;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #b6e145;
+    mask-image: url(img/OrgGeo1_bkgd.svg), url(img/OrgGeo1_bkgd.svg);
+    mask-repeat: repeat, repeat;
+    mask-size: 4rem, 4rem;
+    mask-position: 0 0, -2rem -2rem;
+}
+
+#OrgGeo1 hgroup {
+    position: relative;
+    z-index: 1;
 }
 
 #OrgGeo1 > hgroup > h2 {
     color: #bf23dc;
-    text-shadow: 4px 4px 0 #5a23dc;
+    text-shadow: 3px 3px 0 #5a23dc;
     font-family: "Great Vibes", serif;
-    font-size: 7rem;
+    font-size: 5rem;
     transform: rotate(-8deg);
 }
 
-#OrgGeo1 a {
+#OrgGeo1 p, #OrgGeo1 a {
     color: #450dc7;
+}
+
+@media (hover) {
+    #OrgGeo1 > hgroup > h2 {
+        font-size: 7rem;
+        text-shadow: 4px 4px 0 #5a23dc;
+    }
 }
 
 
@@ -143,30 +186,45 @@ h1 {
 /* ********************************** */
 
 #OrgGeo2 {
-    background-color: #1e008a;
+    background-color: #120073;
+    position: relative;
 }
 
 #OrgGeo2bkgd {
-    background-color: #120073;
-    mask-image: url(img/OrgGeo2_bkgd.svg);
-    mask-repeat: repeat;
-    mask-position: -35px -35px;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1e008a;
+    mask-image: url(img/OrgGeo2_bkgd.svg), url(img/OrgGeo2_bkgd.svg);
+    mask-repeat: repeat, repeat;
+    mask-size: 3rem, 3rem;
+    mask-position: 0 0, -1.5rem -1.5rem;
+}
+
+#OrgGeo2 hgroup {
+    position: relative;
+    z-index: 1;
 }
 
 #OrgGeo2 > hgroup > h2 {
-    color: #FFFFFF;
-    text-shadow: 3px 3px 0 #FFFF00;
+    color: #cfff44;
+    text-shadow: 3px 3px 0 #ffb900;
     font-family: "Times New Roman";
     font-style: italic;
     font-weight: bold;
-    font-size: 8rem;
+    font-size: 4rem;
     transform: rotate(-8deg);
 }
 
-#OrgGeo2 a {
+#OrgGeo2 p, #OrgGeo2 a {
     color: #FFFF00;
 }
 
+@media (hover) {
+    #OrgGeo2 > hgroup > h2 {font-size: 8rem;}
+}
 
 
 /* ********************************** */
@@ -174,53 +232,189 @@ h1 {
 /* ********************************** */
 
 #Plaid {
-    --plaid-1: #00FF8855;
-    --plaid-2: #0055FF55;
-    --plaid-3: #00000055;
-    --plaid-1-fade: #00FF882A;
-    --plaid-2-fade: #0055FF2A;
-    --plaid-3-fade: #0000002A;
-    text-shadow: 0px 0px 10px black, 0 0 3px white;
+    --plaid-1: #00b93e44;
+    --plaid-2: #0055FF44;
+    --plaid-3: #00000044;
+    text-shadow: 0px 0px 2px #FFFFFF, 0px 0px 4px #FFFFFF, 0 0 8px #FFFFFF;
+    background-color: #CCEEFF;
     background-image: 
         linear-gradient(
             85deg,
-            transparent 15rem,
-            var(--plaid-3) 15.2rem,
-            var(--plaid-3) 18rem,
-            transparent 18.2rem,
-            transparent 20rem,
-            var(--plaid-2) 20.2rem,
-            var(--plaid-2) 25rem,
-            transparent 25.2rem,
-            transparent 30rem,
-            var(--plaid-1) 30.2rem,
-            var(--plaid-1) 40rem,
-            transparent 40.2rem,
-            transparent 44rem,
-            var(--plaid-2) 44.2rem,
-            var(--plaid-2) 45rem,
-            transparent 45.2rem
+            transparent 30vw,
+            var(--plaid-3) 30.2vw,
+            var(--plaid-3) 36vw,
+            transparent 36.2vw,
+            transparent 40vw,
+            var(--plaid-2) 40.2vw,
+            var(--plaid-2) 50vw,
+            transparent 50.2vw,
+            transparent 60vw,
+            var(--plaid-1) 60.2vw,
+            var(--plaid-1) 80vw,
+            transparent 80.2vw,
+            transparent 88vw,
+            var(--plaid-2) 88.2vw,
+            var(--plaid-2) 90vw,
+            transparent 90.2vw
         ),
         linear-gradient(
             175deg,
-            transparent 15rem,
-            var(--plaid-3) 15.2rem,
-            var(--plaid-3) 18rem,
-            transparent 18.2rem,
-            transparent 20rem,
-            var(--plaid-2) 20.2rem,
-            var(--plaid-2) 25rem,
-            transparent 25.2rem,
-            transparent 30rem,
-            var(--plaid-1) 30.2rem,
-            var(--plaid-1) 40rem,
-            transparent 40.2rem,
-            transparent 44rem,
-            var(--plaid-2) 44.2rem,
-            var(--plaid-2) 45rem,
-            transparent 45.2rem
+            transparent 15vh,
+            var(--plaid-3) 15.2vh,
+            var(--plaid-3) 18vh,
+            transparent 18.2vh,
+            transparent 20vh,
+            var(--plaid-2) 20.2vh,
+            var(--plaid-2) 25vh,
+            transparent 25.2vh,
+            transparent 30vh,
+            var(--plaid-1) 30.2vh,
+            var(--plaid-1) 40vh,
+            transparent 40.2vh,
+            transparent 44vh,
+            var(--plaid-2) 44.2vh,
+            var(--plaid-2) 45vh,
+            transparent 45.2vh,
+            transparent 60vh,
+            var(--plaid-2) 60.2vh,
+            var(--plaid-2) 62vh,
+            transparent 62.2vh,
+            transparent 66vh,
+            var(--plaid-1) 66.2vh,
+            var(--plaid-1) 69vh,
+            transparent 69.2vh,
+            transparent 70vh,
+            var(--plaid-3) 70.2vh,
+            var(--plaid-3) 72vh,
+            transparent 72.2vh
         )
     ;
+}
+
+@media (any-hover: none) and (orientation: landscape) {
+    #Plaid {
+        background-image: 
+            linear-gradient(
+                175deg,
+                transparent 30vh,
+                var(--plaid-3) 30.2vh,
+                var(--plaid-3) 36vh,
+                transparent 36.2vh,
+                transparent 40vh,
+                var(--plaid-2) 40.2vh,
+                var(--plaid-2) 50vh,
+                transparent 50.2vh,
+                transparent 60vh,
+                var(--plaid-1) 60.2vh,
+                var(--plaid-1) 80vh,
+                transparent 80.2vh,
+                transparent 88vh,
+                var(--plaid-2) 88.2vh,
+                var(--plaid-2) 90vh,
+                transparent 90.2vh
+            ),
+            linear-gradient(
+                85deg,
+                transparent 15vw,
+                var(--plaid-3) 15.2vw,
+                var(--plaid-3) 18vw,
+                transparent 18.2vw,
+                transparent 20vw,
+                var(--plaid-2) 20.2vw,
+                var(--plaid-2) 25vw,
+                transparent 25.2vw,
+                transparent 30vw,
+                var(--plaid-1) 30.2vw,
+                var(--plaid-1) 40vw,
+                transparent 40.2vw,
+                transparent 44vw,
+                var(--plaid-2) 44.2vw,
+                var(--plaid-2) 45vw,
+                transparent 45.2vw,
+                transparent 60vw,
+                var(--plaid-2) 60.2vw,
+                var(--plaid-2) 62vw,
+                transparent 62.2vw,
+                transparent 66vw,
+                var(--plaid-1) 66.2vw,
+                var(--plaid-1) 69vw,
+                transparent 69.2vw,
+                transparent 70vw,
+                var(--plaid-3) 70.2vw,
+                var(--plaid-3) 72vw,
+                transparent 72.2vw
+            )
+        ;
+    }   
+}
+
+@media (hover) {
+    #Plaid {
+        background-image: 
+            linear-gradient(
+                85deg,
+                transparent 10rem,
+                var(--plaid-3) 10.2rem,
+                var(--plaid-3) 12rem,
+                transparent 12.2rem,
+                transparent 13.6rem,
+                var(--plaid-2) 13.8rem,
+                var(--plaid-2) 16.3rem,
+                transparent 16.5rem,
+                transparent 20rem,
+                var(--plaid-1) 20.2rem,
+                var(--plaid-1) 26.6rem,
+                transparent 26.8rem,
+                transparent 29rem,
+                var(--plaid-2) 29.2rem,
+                var(--plaid-2) 30rem,
+                transparent 30.2rem,
+                transparent 40rem,
+                var(--plaid-2) 40.2rem,
+                var(--plaid-2) 41.3rem,
+                transparent 41.5rem,
+                transparent 44rem,
+                var(--plaid-1) 44.2rem,
+                var(--plaid-1) 46rem,
+                transparent 46.2rem,
+                transparent 46.6rem,
+                var(--plaid-3) 46.8rem,
+                var(--plaid-3) 48rem,
+                transparent 48.2rem
+            ),
+            linear-gradient(
+                175deg,
+                transparent 10rem,
+                var(--plaid-3) 10.2rem,
+                var(--plaid-3) 12rem,
+                transparent 12.2rem,
+                transparent 13.6rem,
+                var(--plaid-2) 13.8rem,
+                var(--plaid-2) 16.3rem,
+                transparent 16.5rem,
+                transparent 20rem,
+                var(--plaid-1) 20.2rem,
+                var(--plaid-1) 26.6rem,
+                transparent 26.8rem,
+                transparent 29rem,
+                var(--plaid-2) 29.2rem,
+                var(--plaid-2) 30rem,
+                transparent 30.2rem,
+                transparent 40rem,
+                var(--plaid-2) 40.2rem,
+                var(--plaid-2) 41.3rem,
+                transparent 41.5rem,
+                transparent 44rem,
+                var(--plaid-1) 44.2rem,
+                var(--plaid-1) 46rem,
+                transparent 46.2rem,
+                transparent 46.6rem,
+                var(--plaid-3) 46.8rem,
+                var(--plaid-3) 48rem,
+                transparent 48.2rem
+            )
+        ;
+    }
 }
 
 
@@ -229,6 +423,7 @@ h1 {
 /* ************************************************ */
 
 #TransparentCircles {
+    text-shadow: 0 0 2px #FFFFFF, 0 0 4px #FFFFFF, 0 0 8px #FFFFFF;
     position: relative;
     background-image: 
         url(img/circleMask.svg),
@@ -249,6 +444,11 @@ h1 {
     background-repeat: repeat;
 }
 
+#TransparentCircles hgroup {
+    background-color: 91d9ed88;
+    border-radius: 50%;
+}
+
 #clouds {
     position: absolute;
     height: 100vh;
@@ -258,7 +458,6 @@ h1 {
     z-index: -1;
     background-image: url(img/clouds.jpg);
     background-repeat: repeat;
-    /* background-size: cover; */
 }
 
 
@@ -276,8 +475,8 @@ h1 {
         repeating-linear-gradient(
             100deg,
             black 10px,
-            #111111 11px,
-            #111111 13px,
+            #111115 11px,
+            #111115 13px,
             black 14px,
             black 20px   
         )
@@ -339,8 +538,8 @@ h1 {
 
 #holoOuter {
     position: relative;
-    width: 50vw;
-    height: 50vh;
+    width: 65vw;
+    aspect-ratio: 3 / 2;
     margin: 0 auto;
     opacity: 0.4;
 }
@@ -349,9 +548,20 @@ h1 {
     position: absolute;
     width: 100%;
     height: 0%;
-    padding-bottom: 50vh;
+    padding-bottom: 65vw;
     clip-path: url(#iridOgee);
     background-color: #222222;
+}
+
+@media (orientation: landscape) {
+    #holoOuter {
+        width: unset;
+        height: 65vh;
+        /* aspect-ratio: 2 / 2; */
+    }
+    #holoInner {
+        padding-bottom: 65vh;
+    }
 }
 
 .irid {
@@ -368,7 +578,6 @@ h1 {
         #00FF00 20%,
         transparent 70%);
     left: 2%;
-
 }
 
 #cyan {
@@ -397,12 +606,19 @@ h1 {
 /* Stairs background section */
 /* ************************* */
 
+@media (any-hover: none) and (orientation: landscape) {
+    #Stairs {
+        min-height: 150vh;
+    }
+}
+
 #Stairs hgroup {
     position: relative;   /* needed for z-index stacking */
     z-index: 1;
     background-color: #03164dBB;
     border-radius: 60%;
-    box-shadow: 0 0 30px #03164d5D;
+    box-shadow: 0 0 30px #03164d5D; 
+    padding: 1rem 3rem;
 }
 
 #Stairs hgroup, #Stairs a {
@@ -415,6 +631,9 @@ h1 {
     color: #c2f3ff;
     padding: 1rem;
     border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 10px #03164dBB;
 }
 
 #Stairs {
@@ -603,9 +822,15 @@ h1 {
 #Ogee h2 {
     font-family: "Modak", serif;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #68d6ce;
     text-shadow: 0 0 12px #040072;
+}
+
+@media (hover) {
+    #Ogee h2 {
+        font-size: 3rem;
+    }
 }
 
 #Ogee a {
@@ -644,4 +869,168 @@ h1 {
 }
 
 
+/* *************************************** */
+/* *******  Door panels  section  ******** */
+/* *************************************** */
+
+#DoorPanels {    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: radial-gradient(
+        circle at 35% 0,
+        #FFFFFF,
+        #be0006 70vw
+    );
+    position: relative;
+    overflow-x: hidden;
+}
+
+@media (orientation: landscape) {
+    #DoorPanels {
+        background: radial-gradient(
+           circle at 35% 0,
+            #FFFFFF,
+            #be0006 70vh
+        );
+    }    
+}
+
+#DoorPanels, #DoorPanels a {
+    color: #0c096a;
+}
+
+#DoorPanels p.lorem {
+    color: #0c096aAA;
+}
+
+#DoorPanels h2 {
+    font-family: "Limelight", serif;
+    font-size: 2.8rem;
+    margin: 1.5rem auto;
+}
+
+#DoorPanels p {
+    text-align: left;
+    line-height: 1.3rem;
+    padding: 0 1.3rem;
+}
+
+#DoorPanels p:has(a) {
+    line-height: 100px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#DoorPanels > div {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 14vw 0 25vw;
+    gap: 12vw;
+    justify-content: center;
+}
+
+#DoorPanels > div > div {
+    height: 42vw;
+    width: 60vw;
+    background-color: #68ebff;
+    border: 10vw solid;
+    border-image: url(img/doorPanelBorder.png) 276 repeat;   /* units are pixels for rasta images (like this one), or coordinates for vector images. */
+    position: relative;
+    z-index: 1;
+    box-shadow: -5px 10px 20px #00000066, 5px 10px 20px #00000066;
+    outline: 1px solid #0c096a55;
+    outline-offset: -10vw;
+}
+
+
+@media (any-hover: none) and (orientation: landscape) {
+    #DoorPanels > div {
+        margin: 11vh 0 25vh;
+        gap: 5vw 7vw;
+    }    
+    #DoorPanels > div > div {
+        height: 39vh;
+        width: 31.5vw;
+        border: 4vw solid;
+        border-image: url(img/doorPanelBorder.png) 276 repeat;   /* units are pixels for rasta images (like this one), or coordinates for vector images. */
+        box-shadow: -5px 10px 20px #00000066, 5px 10px 20px #00000066;
+        outline-offset: -6vh;
+    }
+    #DoorPanels h2 {
+        margin: 1rem auto;
+    }
+}
+
+
+@media (hover) {
+    #DoorPanels > div {
+        margin: 4rem 2rem 6rem;
+        gap: 4rem;
+    }    
+    #DoorPanels > div > div {
+        height: 175px;
+        width: 300px;
+        border: 45px solid;
+        border-image: url(img/doorPanelBorder.png) 276 repeat;   /* units are pixels for rasta images (like this one), or coordinates for vector images. */
+        box-shadow: -5px 10px 20px #00000066, 5px 10px 20px #00000066;
+        outline-offset: -45px;
+    }
+    #DoorPanels p {
+        line-height: 1.8rem;
+    }
+}
+
+/* 
+margin-top: 4rem
+border: 45px
+box: 175px
+gap: 4rem
+calc 220px + 8rem
+
+*/
+
+
+
+/* Squiggles: */
+
+#DoorPanels::before, #DoorPanels::after {
+    content: "Lorem";
+    color: transparent;
+    text-decoration: wavy underline #280037;  
+    position: absolute;
+    font-size: 6rem;
+    z-index: 0;
+}
+
+#DoorPanels::before {   
+    top: 56vw;
+    left: -1.8rem;
+    transform: rotate(60deg);
+}
+
+#DoorPanels::after {    
+    top: 136vw;
+    right: -1.8rem;
+    transform: rotate(-60deg);
+}
+
+@media (any-hover: none) and (orientation: landscape) {
+    #DoorPanels::before {   
+        top: 50vh;
+    }
+    #DoorPanels::after {   
+        top: 120vh;
+    }        
+}
+
+@media (hover) {
+    #DoorPanels::before {  
+        top: calc(140px + 4rem);
+        left: calc(10vw - 100px);
+    }
+    #DoorPanels::after {  
+        top: calc(400px + 8rem); 
+        right: calc(10vw - 100px);
+    }
+}
 
