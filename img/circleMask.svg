@@ -15,7 +15,7 @@
      id="layer1">
     <path
        id="rect1"
-       style="fill:#91d9ed;fill-opacity:1;stroke:none;stroke-width:0.550351;stroke-linecap:round;stroke-linejoin:bevel"
+       style="fill:#D09F09;fill-opacity:1;stroke:none;stroke-width:0.550351;stroke-linecap:round;stroke-linejoin:bevel"
        d="M 0,0 V 19.999813 H 19.999813 V 0 Z M 9.9999064,0.99993896 A 9,9 0 0 1 18.999874,9.9999064 9,9 0 0 1 9.9999064,18.999874 9,9 0 0 1 0.99993896,9.9999064 9,9 0 0 1 9.9999064,0.99993896 Z" />
   </g>
 </svg>

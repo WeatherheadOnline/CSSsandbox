@@ -423,41 +423,47 @@ h1, #Home a {
 /* ************************************************ */
 
 #TransparentCircles {
-    text-shadow: 0 0 2px #FFFFFF, 0 0 4px #FFFFFF, 0 0 8px #FFFFFF;
+    --circlesColor: #D09F09;
+    --circlesFaded: #D09F0988;
+    text-shadow: 0 0 2px #fff6a1, 0 0 4px #fff6a1, 0 0 8px #fff6a1;
     position: relative;
     background-image: 
         url(img/circleMask.svg),
         linear-gradient(
-            #91d9edFF,
-            #91d9ed88 7vh,
-            #91d9ed88 93vh,
-            #91d9edFF
+            var(--circlesColor),
+            var(--circlesFaded) 7vh,
+            var(--circlesFaded) 93vh,
+            var(--circlesColor)
         ),
         linear-gradient(
             to right,
-            #91d9edFF,
-            #91d9ed88 7vw,
-            #91d9ed88 90vw,
-            #91d9edFF
+            var(--circlesColor),
+            var(--circlesFaded) 7vw,
+            var(--circlesFaded) 90vw,
+            var(--circlesColor)
         )
     ;
     background-repeat: repeat;
 }
 
+#TransparentCircles, #TransparentCircles a {
+    color: #521700;
+}
+
 #TransparentCircles hgroup {
-    background-color: 91d9ed88;
     border-radius: 50%;
 }
 
-#clouds {
+#circlesTexture {
     position: absolute;
     height: 100vh;
     width: 100%;
     top: 0;
     left: 0;
     z-index: -1;
-    background-image: url(img/clouds.jpg);
-    background-repeat: repeat;
+    background-image: url(img/wallTexture.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
