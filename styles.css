@@ -7,17 +7,17 @@ body {
     margin: 0;
     padding: 0;
 }
-
 section {
     min-height: 100vh;
     border: 2px solid black;
 }
-
-hgroup {padding: 3rem;}
-
 a {font-weight: bold; color: black;}
-
 p {font-weight: bold;}
+footer {
+    height: max-content;
+    padding: 1rem;
+}
+hgroup {padding: 3rem;}
 
 @media (any-hover: none) and (orientation: landscape) {
     hgroup {
@@ -25,10 +25,6 @@ p {font-weight: bold;}
     }
 }
 
-footer {
-    height: max-content;
-    padding: 1rem;
-}
 
 /* ********************************************** */
 /* *******   Landing section: #Home    ********** */
@@ -106,11 +102,7 @@ h1 {
     font-style: italic;
     margin: 3rem auto 3rem auto;
 }
-
-h1, #Home a {
-    color: #110539;
-}
-
+h1, #Home a {color: #110539;}
 #Home a {
     background-color: #FFFFFF44;
     padding: 0.2rem;
@@ -120,9 +112,7 @@ h1, #Home a {
 }
 
 @media (any-hover: none) and (orientation: landscape) {
-    h1 {
-        margin: 5rem auto 3rem auto;
-    }
+    h1 {margin: 5rem auto 3rem auto;}
 }
 
 @media (hover) {
@@ -134,6 +124,217 @@ h1, #Home a {
 }
 
 
+/* ***************************************** */
+/* *******  Picture frames section  ******** */
+/* ***************************************** */
+
+#PictureFrames {    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: radial-gradient(
+        circle at 35% 0,
+        #FFFFFF,
+        #be0006 70vw
+    );
+    position: relative;
+    overflow-x: hidden;
+}
+
+@media (orientation: landscape) {
+    #PictureFrames {
+        background: radial-gradient(
+           circle at 35% 0,
+            #FFFFFF,
+            #be0006 70vh
+        );
+    }    
+}
+
+#PictureFrames, #PictureFrames a {color: #0c096a;}
+#PictureFrames p.lorem {color: #0c096aAA;}
+#PictureFrames h2 {
+    font-family: "Limelight", serif;
+    font-size: 2.8rem;
+    margin: 1.5rem auto;
+    text-shadow: 0 2px 5px #00000066;
+}
+#PictureFrames p {
+    text-align: left;
+    line-height: 1.3rem;
+    padding: 0 1.3rem;
+}
+#PictureFrames p:has(a) {
+    line-height: 100px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+#PictureFrames > div {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 14vw 0 25vw;
+    gap: 12vw;
+    justify-content: center;
+}
+#PictureFrames > div > div {
+    height: 42vw; width: 60vw;
+    background-color: #68ebff;
+    background: linear-gradient(to bottom, #53d9ed, #68ebff 15%);
+    border: 10vw solid;
+    border-image: url(img/doorPanelBorder.png) 276 repeat;   /* units are pixels for rasta images (like this one), or coordinates for vector images. */
+    position: relative;
+    z-index: 1;
+    box-shadow: -5px 10px 20px #00000066, 5px 10px 20px #00000066;
+    outline: 1px solid #0c096a55;
+    outline-offset: -10vw;
+}
+
+@media (any-hover: none) and (orientation: landscape) {
+    #PictureFrames > div {
+        margin: 11vh 0 25vh;
+        gap: 5vw 7vw;
+    }    
+    #PictureFrames > div > div {
+        height: 39vh; width: 31.5vw;
+        border: 4vw solid;
+        border-image: url(img/doorPanelBorder.png) 276 repeat;   /* units are pixels for rasta images (like this one), or coordinates for vector images. */
+        box-shadow: -5px 10px 20px #00000066, 5px 10px 20px #00000066;
+        outline-offset: -6vh;
+    }
+    #PictureFrames h2 {margin: 1rem auto;}
+}
+
+@media (hover) {
+    #PictureFrames > div {
+        margin: 4rem 2rem 6rem;
+        gap: 4rem;
+    }    
+    #PictureFrames > div > div {
+        height: 175px; width: 300px;
+        border: 45px solid;
+        border-image: url(img/doorPanelBorder.png) 276 repeat;   /* units are pixels for rasta images (like this one), or coordinates for vector images. */
+        box-shadow: -5px 10px 20px #00000066, 5px 10px 20px #00000066;
+        outline-offset: -45px;
+    }
+    #PictureFrames p {line-height: 1.8rem;}
+}
+
+/* Squiggles: */
+
+#PictureFrames::before, #PictureFrames::after {
+    content: "Lorem";
+    color: transparent;
+    text-decoration: wavy underline #280037;  
+    position: absolute;
+    font-size: 6rem;
+    z-index: 0;
+}
+#PictureFrames::before {   
+    top: 56vw; left: -1.8rem;
+    transform: rotate(60deg);
+}
+#PictureFrames::after {    
+    top: 136vw; right: -1.8rem;
+    transform: rotate(-60deg);
+}
+
+@media (any-hover: none) and (orientation: landscape) {
+    #PictureFrames::before {top: 50vh;}
+    #PictureFrames::after {top: 120vh;}        
+}
+
+@media (hover) {
+    #PictureFrames::before {  
+        top: calc(140px + 4rem);
+        left: calc(10vw - 100px);
+    }
+    #PictureFrames::after {  
+        top: calc(400px + 8rem); 
+        right: calc(10vw - 100px);
+    }
+}
+
+
+/* ****************************************** */
+/* *******  Shimmering text section  ******** */
+/* ****************************************** */
+
+#TextShimmer {
+    background: radial-gradient(
+        circle at bottom right,
+        #333333,
+        #000000
+    );
+}
+#TextShimmer h2, #TextShimmer h3, #TextShimmer a {
+    font-family: "Cooper Black", sans-serif;
+}
+#TextShimmer h2, #TextShimmer h3 {
+    color: transparent;
+    margin: 0;
+    text-shadow: -1px 2px 5px #FFFFFF88;
+}
+#TextShimmer h3 span {white-space: nowrap;}
+#TextShimmer a {color: #0b7f72; text-shadow: 0 -1px 5px #0b7f72}
+#TextShimmer h2 {font-size: 12vw;}
+#TextShimmer h3 {font-size: 6vw;}
+#TextShimmer h3 {margin: 2vh 0;}
+#TextShimmer hgroup div {margin: 6vh 0 10vh;}
+
+@media (any-hover: none) and (orientation: landscape) {
+    #TextShimmer h2 {font-size: 4rem;}
+    #TextShimmer h3 {font-size: 2rem;}
+    #TextShimmer h3 {margin: 0;}
+    #TextShimmer hgroup div {margin: 1rem 0 2rem;}    
+}
+
+@media (hover) {
+    #TextShimmer h2 {font-size: 4rem;}
+    #TextShimmer h3 {font-size: 2rem;}
+    #TextShimmer h3 {margin: 2vh 0;}
+    #TextShimmer hgroup div {margin: 4rem 0 5rem;}
+}
+
+/* Animation:  */
+
+#TextShimmer hgroup div {
+    position: relative;
+    background: linear-gradient(
+        110deg, 
+        #c7adb3ff 10%,
+        #d8a708ff 12%,
+        #ce128fff 14%,
+        #591df7ff 16%,
+        #0b7f72ff 18%,
+        #c7adb3ff 20%,
+        
+        #c7adb3ff 43%,
+        #d8a708ff 45%,
+        #ce128fff 47%,
+        #591df7ff 49%,
+        #0b7f72ff 51%,
+        #c7adb3ff 53%,
+        
+        #c7adb3ff 76%,
+        #d8a708ff 78%,
+        #ce128fff 80%,
+        #591df7ff 82%,
+        #0b7f72ff 84%,
+        #c7adb3ff 86%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 400vw 100vh;   
+}
+
+#TextShimmer hgroup div:first-of-type {
+    animation: shimmerText 7s linear infinite;
+}
+@keyframes shimmerText {
+    from {background-position: 0;}
+    to {background-position: -400vw;}
+}
+
+
 /* ********************************** */
 /* *******  OrgGeo1 section  ******** */
 /* ********************************** */
@@ -142,25 +343,20 @@ h1, #Home a {
     background-color: #c9e976;
     position: relative;
 }
-
 #OrgGeo1bkgd {
-    height: 100vh;
-    width: 100%;
+    height: 100vh; width: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     background-color: #b6e145;
     mask-image: url(img/OrgGeo1_bkgd.svg), url(img/OrgGeo1_bkgd.svg);
     mask-repeat: repeat, repeat;
     mask-size: 4rem, 4rem;
     mask-position: 0 0, -2rem -2rem;
 }
-
 #OrgGeo1 hgroup {
     position: relative;
     z-index: 1;
 }
-
 #OrgGeo1 > hgroup > h2 {
     color: #bf23dc;
     text-shadow: 3px 3px 0 #5a23dc;
@@ -168,10 +364,7 @@ h1, #Home a {
     font-size: 5rem;
     transform: rotate(-8deg);
 }
-
-#OrgGeo1 p, #OrgGeo1 a {
-    color: #450dc7;
-}
+#OrgGeo1 p, #OrgGeo1 a {color: #450dc7;}
 
 @media (hover) {
     #OrgGeo1 > hgroup > h2 {
@@ -189,25 +382,20 @@ h1, #Home a {
     background-color: #120073;
     position: relative;
 }
-
 #OrgGeo2bkgd {
-    height: 100vh;
-    width: 100%;
+    height: 100vh; width: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     background-color: #1e008a;
     mask-image: url(img/OrgGeo2_bkgd.svg), url(img/OrgGeo2_bkgd.svg);
     mask-repeat: repeat, repeat;
     mask-size: 3rem, 3rem;
     mask-position: 0 0, -1.5rem -1.5rem;
 }
-
 #OrgGeo2 hgroup {
     position: relative;
     z-index: 1;
 }
-
 #OrgGeo2 > hgroup > h2 {
     color: #cfff44;
     text-shadow: 3px 3px 0 #ffb900;
@@ -217,13 +405,352 @@ h1, #Home a {
     font-size: 4rem;
     transform: rotate(-8deg);
 }
-
-#OrgGeo2 p, #OrgGeo2 a {
-    color: #FFFF00;
-}
+#OrgGeo2 p, #OrgGeo2 a { color: #FFFF00;}
 
 @media (hover) {
     #OrgGeo2 > hgroup > h2 {font-size: 8rem;}
+}
+
+
+/* ******************************************************** */
+/* *******  Peacock feather iridescence section  ********** */
+/* ******************************************************** */
+
+/* https://davesmyth.com/clip-path-scaling */
+
+#Peacock {
+    color: white;
+    background-color: #111111;
+}
+#Peacock a {color: #DD33FF;}
+#holoOuter {
+    position: relative;
+    width: 65vw;
+    aspect-ratio: 3 / 2;
+    margin: 0 auto;
+    opacity: 0.4;
+}
+#holoInner {
+    position: absolute;
+    width: 100%; height: 0%;
+    padding-bottom: 65vw;
+    clip-path: url(#iridOgee);
+    background-color: #222222;
+}
+
+@media (orientation: landscape) {
+    #holoOuter {
+        width: unset;
+        height: 65vh;
+    }
+    #holoInner { padding-bottom: 65vh;}
+}
+
+.irid {
+    width: 70%; height: 100%;
+    position: absolute;
+    opacity: 0;
+    overflow: visible;
+    border-radius: 45%;
+}
+#green {
+    background-image: radial-gradient(
+        #00FF00 20%,
+        transparent 70%);
+    left: 2%;
+}
+#cyan {
+    background-image: radial-gradient(
+        #00FFFF 20%,
+        transparent 70%);
+    left: 17%;
+}
+#blue {
+    background-image: radial-gradient(
+        #0000FF 20%,
+        transparent 70%);
+    left: 32%;
+}
+#magenta {
+    background-image: radial-gradient(
+        #FF00FF 20%,
+        transparent 70%);
+    right: -2%;
+}
+
+
+/* ***************************************** */    
+/* *******  Ogee pattern section  ********** */
+/* ***************************************** */
+
+#Ogee {
+    position: relative;
+    overflow: hidden;
+}
+#Ogee hgroup { z-index: 5;}
+#Ogee h2 {
+    font-family: "Modak", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #68d6ce;
+    text-shadow: 0 0 12px #040072;
+}
+
+@media (hover) {
+    #Ogee h2 {font-size: 3rem;}
+}
+
+#Ogee a {
+    color: #040072;
+    text-shadow: 0 0 6px #040072AA;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+#ogeeOuter, #ogeeInner {
+    position: absolute;
+    width: 100%;
+    margin: 0; padding: 0;
+}
+#ogeeOuter {
+    height: 100vh;
+    top: 0; left: 0;
+    background-image: repeating-linear-gradient(
+        #ffd285 0px,
+        #ff6684 50px
+    );
+    z-index: -1;
+}
+#ogeeInner {
+    height: calc(100vh + 50px);
+    top: -25px; left: 0;
+    background-image: url(img/ogeeGradient.svg);
+    background-size: 50px;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+
+/* ************************* */
+/* Stairs background section */
+/* ************************* */
+
+@media (any-hover: none) and (orientation: landscape) {
+    #Stairs {
+        min-height: 150vh;
+    }
+}
+
+#Stairs hgroup {
+    position: relative;   /* needed for z-index stacking */
+    z-index: 1;
+    background-color: #03164dBB;
+    border-radius: 60%;
+    box-shadow: 0 0 30px #03164d5D; 
+    padding: 1rem 3rem;
+}
+#Stairs hgroup, #Stairs a {
+    color: #c2f3ff;
+    text-shadow: 0px 0px 10px #c2f3ff, 0 0 3px #03164d;
+}
+#Stairs button {
+    background-color: #311463;
+    color: #c2f3ff;
+    padding: 1rem;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 10px #03164dBB;
+}
+#Stairs {
+    --line-color: #311463;
+    --dimension: 100px;  /* Remember: update the unitWidth variable in stairs.js to match */
+    --curve-size: 25px;
+    --curve-reverse: -25px;
+    --line-width: 8px;   /* Remember to update the lineWidth variable in stairs.js to match */
+    --line-reverse: -8px;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #03164d;
+}
+#stairsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0; padding: 0;
+    position: absolute;
+    top: var(--line-reverse);
+    left: var(--line-reverse);
+    z-index: 0;
+}
+.stair {
+    z-index: 0;
+    position: relative;
+    box-sizing: border-box;
+    height: var(--dimension);
+    width: var(--dimension);
+    border-radius: var(--curve-size);
+    border-top: var(--line-width) solid var(--line-color);
+    border-left: var(--line-width) solid var(--line-color);
+    border-bottom: calc(var(--curve-size)) solid transparent;
+    border-right: calc(var(--curve-size)) solid transparent;
+}
+.stairInner {
+    position: absolute;
+    z-index: 0;
+    bottom: calc(var(--curve-reverse) - var(--line-width));
+    right: calc(var(--curve-reverse) - var(--line-width));
+    height: calc(var(--dimension)/2);
+    width: calc(var(--dimension)/2);    
+    border-radius: var(--curve-size);
+    border-bottom: var(--line-width) solid var(--line-color);
+    border-right: var(--line-width) solid var(--line-color);
+    border-top: calc(var(--curve-size)) solid transparent;
+    border-left: calc(var(--curve-size)) solid transparent;
+}
+.stairBox {
+    z-index: 0;
+    height: calc(var(--dimension) / 2);
+    width: calc(var(--dimension) / 2);
+    position: absolute;
+    top: calc(var(--dimension) / 4 - (var(--line-width) / 2));
+    left: calc(var(--dimension) / 4 - (var(--line-width) / 2));
+    background-color: #0b2977;
+    animation: stairStrobe 1s linear infinite;
+}
+
+@keyframes stairStrobe {
+    0% {box-shadow:	
+        0 0 0 4px #014d6d inset,
+        0 0 0 8px #0e318b inset,
+        0 0 0 11px #0b2977 inset,
+        0 0 0 15px #391294 inset,
+        0 0 0 18px #0e318b inset,
+        0 0 0 22px #014d6d inset,
+        0 0 0 25px #0b2977 inset;
+    }	
+    14% {box-shadow:	
+        0 0 0 4px #0b2977 inset,
+        0 0 0 8px #014d6d inset,
+        0 0 0 11px #0e318b inset,
+        0 0 0 15px #0b2977 inset,
+        0 0 0 18px #391294 inset,
+        0 0 0 22px #0e318b inset,
+        0 0 0 25px #014d6d inset;
+    }	
+    28% {box-shadow:	
+        0 0 0 4px #014d6d inset,
+        0 0 0 8px #0b2977 inset,
+        0 0 0 11px #014d6d inset,
+        0 0 0 15px #0e318b inset,
+        0 0 0 18px #0b2977 inset,
+        0 0 0 22px #391294 inset,
+        0 0 0 25px #0e318b inset;
+    }	
+    43% {box-shadow:	
+        0 0 0 4px #0e318b inset,
+        0 0 0 8px #014d6d inset,
+        0 0 0 11px #0b2977 inset,
+        0 0 0 15px #014d6d inset,
+        0 0 0 18px #0e318b inset,
+        0 0 0 22px #0b2977 inset,
+        0 0 0 25px #391294 inset;
+    }	
+    57% {box-shadow:	
+        0 0 0 4px #391294 inset,
+        0 0 0 8px #0e318b inset,
+        0 0 0 11px #014d6d inset,
+        0 0 0 15px #0b2977 inset,
+        0 0 0 18px #014d6d inset,
+        0 0 0 22px #0e318b inset,
+        0 0 0 25px #0b2977 inset;
+    }	
+    71% {box-shadow:	
+        0 0 0 4px #0b2977 inset,
+        0 0 0 8px #391294 inset,
+        0 0 0 11px #0e318b inset,
+        0 0 0 15px #014d6d inset,
+        0 0 0 18px #0b2977 inset,
+        0 0 0 22px #014d6d inset,
+        0 0 0 25px #0e318b inset;
+    }	
+    86% {box-shadow:	
+        0 0 0 4px #0e318b inset,
+        0 0 0 8px #0b2977 inset,
+        0 0 0 11px #391294 inset,
+        0 0 0 15px #0e318b inset,
+        0 0 0 18px #014d6d inset,
+        0 0 0 22px #0b2977 inset,
+        0 0 0 25px #014d6d inset;
+    }	
+    100% {box-shadow:	
+        0 0 0 4px #014d6d inset,
+        0 0 0 8px #0e318b inset,
+        0 0 0 11px #0b2977 inset,
+        0 0 0 15px #391294 inset,
+        0 0 0 18px #0e318b inset,
+        0 0 0 22px #014d6d inset,
+        0 0 0 25px #0b2977 inset;
+    }	
+}
+
+
+/* **************************************************** */
+/* *******  Dark diagonal pinstripe section  ********** */
+/* **************************************************** */
+
+#Pinstripe {
+    color: white;
+    background-image: 
+        radial-gradient(
+            transparent 10%,
+            #000000CC
+        ),
+        repeating-linear-gradient(
+            100deg,
+            black 10px,
+            #111115 11px,
+            #111115 13px,
+            black 14px,
+            black 20px   
+        )
+    ;
+}
+
+#Pinstripe a {
+    padding: 1rem;
+    position: relative;
+    top: 2rem;
+    border-radius: 20px;
+    outline: 1px solid black;
+    font-weight: bolder;
+    text-shadow: 0px 0px 5px black;
+    background-image: 
+        radial-gradient(
+            at 75% 65%,
+            #FFFFFFAA 0%,
+            #ff1f3155 20%,
+            #9e1d2855 30%,
+            #55021433 40%
+        ),
+        radial-gradient(
+            #ff1f31,
+            #2c000a 70%
+        )
+    ;
+}
+
+#Pinstripe a::after {     /* This is the light shining off the underlying surface */
+    content: "";
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    right: -9px;
+    bottom: -2px;
+    background-image: radial-gradient(
+        #FFFFFF88 10%,
+        #FFFFFF00 80%
+    );
+    border-radius: 50%;
 }
 
 
@@ -446,597 +973,16 @@ h1, #Home a {
     background-repeat: repeat;
 }
 
-#TransparentCircles, #TransparentCircles a {
-    color: #521700;
-}
+#TransparentCircles, #TransparentCircles a {color: #521700;}
 
-#TransparentCircles hgroup {
-    border-radius: 50%;
-}
+#TransparentCircles hgroup {border-radius: 50%;}
 
 #circlesTexture {
     position: absolute;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
+    height: 100vh; width: 100%;
+    top: 0; left: 0;
     z-index: -1;
     background-image: url(img/wallTexture.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-
-/* **************************************************** */
-/* *******  Dark diagonal pinstripe section  ********** */
-/* **************************************************** */
-
-#Pinstripe {
-    color: white;
-    background-image: 
-        radial-gradient(
-            transparent 10%,
-            #000000CC
-        ),
-        repeating-linear-gradient(
-            100deg,
-            black 10px,
-            #111115 11px,
-            #111115 13px,
-            black 14px,
-            black 20px   
-        )
-    ;
-}
-
-#Pinstripe a {
-    padding: 1rem;
-    position: relative;
-    top: 2rem;
-    border-radius: 20px;
-    outline: 1px solid black;
-    font-weight: bolder;
-    text-shadow: 0px 0px 5px black;
-    background-image: 
-        radial-gradient(
-            at 75% 65%,
-            #FFFFFFAA 0%,
-            #ff1f3155 20%,
-            #9e1d2855 30%,
-            #55021433 40%
-        ),
-        radial-gradient(
-            #ff1f31,
-            #2c000a 70%
-        )
-    ;
-}
-
-#Pinstripe a::after {     /* This is the light shining off the underlying surface */
-    content: "";
-    position: absolute;
-    height: 20%;
-    width: 20%;
-    right: -9px;
-    bottom: -2px;
-    background-image: radial-gradient(
-        #FFFFFF88 10%,
-        #FFFFFF00 80%
-    );
-    border-radius: 50%;
-}
-
-
-/* ******************************************************** */
-/* *******  Peacock feather iridescence section  ********** */
-/* ******************************************************** */
-
-/* https://davesmyth.com/clip-path-scaling */
-
-#Peacock {
-    color: white;
-    background-color: #111111;
-}
-
-#Peacock a {
-    color: #DD33FF;
-}
-
-#holoOuter {
-    position: relative;
-    width: 65vw;
-    aspect-ratio: 3 / 2;
-    margin: 0 auto;
-    opacity: 0.4;
-}
-
-#holoInner {
-    position: absolute;
-    width: 100%;
-    height: 0%;
-    padding-bottom: 65vw;
-    clip-path: url(#iridOgee);
-    background-color: #222222;
-}
-
-@media (orientation: landscape) {
-    #holoOuter {
-        width: unset;
-        height: 65vh;
-        /* aspect-ratio: 2 / 2; */
-    }
-    #holoInner {
-        padding-bottom: 65vh;
-    }
-}
-
-.irid {
-    width: 70%;
-    height: 100%;
-    position: absolute;
-    opacity: 0;
-    overflow: visible;
-    border-radius: 45%;
-}
-
-#green {
-    background-image: radial-gradient(
-        #00FF00 20%,
-        transparent 70%);
-    left: 2%;
-}
-
-#cyan {
-    background-image: radial-gradient(
-        #00FFFF 20%,
-        transparent 70%);
-    left: 17%;
-}
-
-#blue {
-    background-image: radial-gradient(
-        #0000FF 20%,
-        transparent 70%);
-    left: 32%;
-}
-
-#magenta {
-    background-image: radial-gradient(
-        #FF00FF 20%,
-        transparent 70%);
-    right: -2%;
-}
-
-
-/* ************************* */
-/* Stairs background section */
-/* ************************* */
-
-@media (any-hover: none) and (orientation: landscape) {
-    #Stairs {
-        min-height: 150vh;
-    }
-}
-
-#Stairs hgroup {
-    position: relative;   /* needed for z-index stacking */
-    z-index: 1;
-    background-color: #03164dBB;
-    border-radius: 60%;
-    box-shadow: 0 0 30px #03164d5D; 
-    padding: 1rem 3rem;
-}
-
-#Stairs hgroup, #Stairs a {
-    color: #c2f3ff;
-    text-shadow: 0px 0px 10px #c2f3ff, 0 0 3px #03164d;
-}
-
-#Stairs button {
-    background-color: #311463;
-    color: #c2f3ff;
-    padding: 1rem;
-    border-radius: 50%;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 0 0 10px #03164dBB;
-}
-
-#Stairs {
-    --line-color: #311463;
-    --dimension: 100px;  /* Remember: update the unitWidth variable in stairs.js to match */
-    --curve-size: 25px;
-    --curve-reverse: -25px;
-    --line-width: 8px;   /* Remember to update the lineWidth variable in stairs.js to match */
-    --line-reverse: -8px;
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #03164d;
-}
-
-#stairsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: var(--line-reverse);
-    left: var(--line-reverse);
-    z-index: 0;
-}
-
-.stair {
-    z-index: 0;
-    position: relative;
-    box-sizing: border-box;
-    height: var(--dimension);
-    width: var(--dimension);
-
-    border-radius: var(--curve-size);
-    border-top: var(--line-width) solid var(--line-color);
-    border-left: var(--line-width) solid var(--line-color);
-    border-bottom: calc(var(--curve-size)) solid transparent;
-    border-right: calc(var(--curve-size)) solid transparent;
-}
-
-.stairInner {
-    position: absolute;
-    z-index: 0;
-    bottom: calc(var(--curve-reverse) - var(--line-width));
-    right: calc(var(--curve-reverse) - var(--line-width));
-    height: calc(var(--dimension)/2);
-    width: calc(var(--dimension)/2);    
-    
-    border-radius: var(--curve-size);
-    border-bottom: var(--line-width) solid var(--line-color);
-    border-right: var(--line-width) solid var(--line-color);
-    border-top: calc(var(--curve-size)) solid transparent;
-    border-left: calc(var(--curve-size)) solid transparent;
-}
-
-.stairBox {
-    z-index: 0;
-    height: calc(var(--dimension) / 2);
-    width: calc(var(--dimension) / 2);
-    position: absolute;
-    top: calc(var(--dimension) / 4 - (var(--line-width) / 2));
-    left: calc(var(--dimension) / 4 - (var(--line-width) / 2));
-    /* box-shadow: 
-        0 0 0 4px #014d6d inset,
-        0 0 0 8px #0e318b inset,
-        0 0 0 11px #0b2977 inset,
-        0 0 0 15px #391294 inset,
-        0 0 0 18px #0e318b inset,
-        0 0 0 22px #014d6d inset,
-        0 0 0 25px #0b2977 inset; */
-    background-color: #0b2977;
-    animation: stairStrobe 1s linear infinite;
-}
-
-@keyframes stairStrobe {
-    0% {box-shadow:	
-        0 0 0 4px #014d6d inset,
-        0 0 0 8px #0e318b inset,
-        0 0 0 11px #0b2977 inset,
-        0 0 0 15px #391294 inset,
-        0 0 0 18px #0e318b inset,
-        0 0 0 22px #014d6d inset,
-        0 0 0 25px #0b2977 inset;
-    }	
-    14% {box-shadow:	
-        0 0 0 4px #0b2977 inset,
-        0 0 0 8px #014d6d inset,
-        0 0 0 11px #0e318b inset,
-        0 0 0 15px #0b2977 inset,
-        0 0 0 18px #391294 inset,
-        0 0 0 22px #0e318b inset,
-        0 0 0 25px #014d6d inset;
-    }	
-    28% {box-shadow:	
-        0 0 0 4px #014d6d inset,
-        0 0 0 8px #0b2977 inset,
-        0 0 0 11px #014d6d inset,
-        0 0 0 15px #0e318b inset,
-        0 0 0 18px #0b2977 inset,
-        0 0 0 22px #391294 inset,
-        0 0 0 25px #0e318b inset;
-    }	
-    43% {box-shadow:	
-        0 0 0 4px #0e318b inset,
-        0 0 0 8px #014d6d inset,
-        0 0 0 11px #0b2977 inset,
-        0 0 0 15px #014d6d inset,
-        0 0 0 18px #0e318b inset,
-        0 0 0 22px #0b2977 inset,
-        0 0 0 25px #391294 inset;
-    }	
-    57% {box-shadow:	
-        0 0 0 4px #391294 inset,
-        0 0 0 8px #0e318b inset,
-        0 0 0 11px #014d6d inset,
-        0 0 0 15px #0b2977 inset,
-        0 0 0 18px #014d6d inset,
-        0 0 0 22px #0e318b inset,
-        0 0 0 25px #0b2977 inset;
-    }	
-    71% {box-shadow:	
-        0 0 0 4px #0b2977 inset,
-        0 0 0 8px #391294 inset,
-        0 0 0 11px #0e318b inset,
-        0 0 0 15px #014d6d inset,
-        0 0 0 18px #0b2977 inset,
-        0 0 0 22px #014d6d inset,
-        0 0 0 25px #0e318b inset;
-    }	
-    86% {box-shadow:	
-        0 0 0 4px #0e318b inset,
-        0 0 0 8px #0b2977 inset,
-        0 0 0 11px #391294 inset,
-        0 0 0 15px #0e318b inset,
-        0 0 0 18px #014d6d inset,
-        0 0 0 22px #0b2977 inset,
-        0 0 0 25px #014d6d inset;
-    }	
-    100% {box-shadow:	
-        0 0 0 4px #014d6d inset,
-        0 0 0 8px #0e318b inset,
-        0 0 0 11px #0b2977 inset,
-        0 0 0 15px #391294 inset,
-        0 0 0 18px #0e318b inset,
-        0 0 0 22px #014d6d inset,
-        0 0 0 25px #0b2977 inset;
-    }	
-}
-
-
-/* ******************* */
-/* Stripe text section */
-/* ******************* */
-
-#StripeText {
-    background-color: #03164d;
-}
-
-#StripeText > p {
-    text-transform: uppercase;
-    font-family: "Manrope", serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 6rem;
-    margin-top: 2rem;
-    padding: 0 2rem;
-
-}
-
-
-/* ***************************************** */    
-/* *******  Ogee pattern section  ********** */
-/* ***************************************** */
-
-
-#Ogee {
-    position: relative;
-    overflow: hidden;
-}
-
-#Ogee hgroup {
-    z-index: 5;
-}
-
-#Ogee h2 {
-    font-family: "Modak", serif;
-    font-weight: 400;
-    font-size: 2rem;
-    color: #68d6ce;
-    text-shadow: 0 0 12px #040072;
-}
-
-@media (hover) {
-    #Ogee h2 {
-        font-size: 3rem;
-    }
-}
-
-#Ogee a {
-    color: #040072;
-    text-shadow: 0 0 6px #040072AA;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-#ogeeOuter, #ogeeInner {
-    position: absolute;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-#ogeeOuter {
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-image: repeating-linear-gradient(
-        #ffd285 0px,
-        #ff6684 50px
-    );
-    z-index: -1;
-}
-
-#ogeeInner {
-    height: calc(100vh + 50px);
-    top: -25px;
-    left: 0;
-    background-image: url(img/ogeeGradient.svg);
-    background-size: 50px;
-    background-repeat: repeat;
-    z-index: -1;
-}
-
-
-/* *************************************** */
-/* *******  Door panels  section  ******** */
-/* *************************************** */
-
-#DoorPanels {    
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background: radial-gradient(
-        circle at 35% 0,
-        #FFFFFF,
-        #be0006 70vw
-    );
-    position: relative;
-    overflow-x: hidden;
-}
-
-@media (orientation: landscape) {
-    #DoorPanels {
-        background: radial-gradient(
-           circle at 35% 0,
-            #FFFFFF,
-            #be0006 70vh
-        );
-    }    
-}
-
-#DoorPanels, #DoorPanels a {
-    color: #0c096a;
-}
-
-#DoorPanels p.lorem {
-    color: #0c096aAA;
-}
-
-#DoorPanels h2 {
-    font-family: "Limelight", serif;
-    font-size: 2.8rem;
-    margin: 1.5rem auto;
-}
-
-#DoorPanels p {
-    text-align: left;
-    line-height: 1.3rem;
-    padding: 0 1.3rem;
-}
-
-#DoorPanels p:has(a) {
-    line-height: 100px;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-#DoorPanels > div {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 14vw 0 25vw;
-    gap: 12vw;
-    justify-content: center;
-}
-
-#DoorPanels > div > div {
-    height: 42vw;
-    width: 60vw;
-    background-color: #68ebff;
-    border: 10vw solid;
-    border-image: url(img/doorPanelBorder.png) 276 repeat;   /* units are pixels for rasta images (like this one), or coordinates for vector images. */
-    position: relative;
-    z-index: 1;
-    box-shadow: -5px 10px 20px #00000066, 5px 10px 20px #00000066;
-    outline: 1px solid #0c096a55;
-    outline-offset: -10vw;
-}
-
-
-@media (any-hover: none) and (orientation: landscape) {
-    #DoorPanels > div {
-        margin: 11vh 0 25vh;
-        gap: 5vw 7vw;
-    }    
-    #DoorPanels > div > div {
-        height: 39vh;
-        width: 31.5vw;
-        border: 4vw solid;
-        border-image: url(img/doorPanelBorder.png) 276 repeat;   /* units are pixels for rasta images (like this one), or coordinates for vector images. */
-        box-shadow: -5px 10px 20px #00000066, 5px 10px 20px #00000066;
-        outline-offset: -6vh;
-    }
-    #DoorPanels h2 {
-        margin: 1rem auto;
-    }
-}
-
-
-@media (hover) {
-    #DoorPanels > div {
-        margin: 4rem 2rem 6rem;
-        gap: 4rem;
-    }    
-    #DoorPanels > div > div {
-        height: 175px;
-        width: 300px;
-        border: 45px solid;
-        border-image: url(img/doorPanelBorder.png) 276 repeat;   /* units are pixels for rasta images (like this one), or coordinates for vector images. */
-        box-shadow: -5px 10px 20px #00000066, 5px 10px 20px #00000066;
-        outline-offset: -45px;
-    }
-    #DoorPanels p {
-        line-height: 1.8rem;
-    }
-}
-
-/* 
-margin-top: 4rem
-border: 45px
-box: 175px
-gap: 4rem
-calc 220px + 8rem
-
-*/
-
-
-
-/* Squiggles: */
-
-#DoorPanels::before, #DoorPanels::after {
-    content: "Lorem";
-    color: transparent;
-    text-decoration: wavy underline #280037;  
-    position: absolute;
-    font-size: 6rem;
-    z-index: 0;
-}
-
-#DoorPanels::before {   
-    top: 56vw;
-    left: -1.8rem;
-    transform: rotate(60deg);
-}
-
-#DoorPanels::after {    
-    top: 136vw;
-    right: -1.8rem;
-    transform: rotate(-60deg);
-}
-
-@media (any-hover: none) and (orientation: landscape) {
-    #DoorPanels::before {   
-        top: 50vh;
-    }
-    #DoorPanels::after {   
-        top: 120vh;
-    }        
-}
-
-@media (hover) {
-    #DoorPanels::before {  
-        top: calc(140px + 4rem);
-        left: calc(10vw - 100px);
-    }
-    #DoorPanels::after {  
-        top: calc(400px + 8rem); 
-        right: calc(10vw - 100px);
-    }
-}
-
