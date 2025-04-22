@@ -459,17 +459,35 @@ h1, #Home a {color: #110539;}
         transparent 70%);
     left: 2%;
 }
+#green-cyan {
+    background-image: radial-gradient(
+        #00FF99 20%,
+        transparent 70%);
+    left: 10%;
+}
 #cyan {
     background-image: radial-gradient(
         #00FFFF 20%,
         transparent 70%);
     left: 17%;
 }
+#cyan-blue {
+    background-image: radial-gradient(
+        #0088FF 20%,
+        transparent 70%);
+    left: 25%;
+}
 #blue {
     background-image: radial-gradient(
         #0000FF 20%,
         transparent 70%);
     left: 32%;
+}
+#blue-magenta {
+    background-image: radial-gradient(
+        #8800FF 20%,
+        transparent 70%);
+    left: 40%;
 }
 #magenta {
     background-image: radial-gradient(
@@ -615,10 +633,13 @@ h1, #Home a {color: #110539;}
     top: calc(var(--dimension) / 4 - (var(--line-width) / 2));
     left: calc(var(--dimension) / 4 - (var(--line-width) / 2));
     background-color: #0b2977;
-    animation: stairStrobe 1s linear infinite;
+    background-color: #001a5e;
+    background-color: #04226b;
+    border-radius: 20%;
+    /* animation: stairStrobe 1s linear infinite; */
 }
 
-@keyframes stairStrobe {
+/* @keyframes stairStrobe {
     0% {box-shadow:	
         0 0 0 4px #014d6d inset,
         0 0 0 8px #0e318b inset,
@@ -691,7 +712,7 @@ h1, #Home a {color: #110539;}
         0 0 0 22px #014d6d inset,
         0 0 0 25px #0b2977 inset;
     }	
-}
+} */
 
 
 /* **************************************************** */
@@ -986,3 +1007,5 @@ h1, #Home a {color: #110539;}
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+

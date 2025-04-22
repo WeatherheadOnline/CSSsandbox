@@ -1,6 +1,3 @@
-console.clear();
-console.log("Initialized");
-
 const bkgd = document.getElementById("TextShimmer").children[0].children[2];
 
 if ("ontouchstart" in window) {

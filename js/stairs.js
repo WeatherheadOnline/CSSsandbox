@@ -54,20 +54,20 @@ function drawStairs() {
 
 //  Enable button to toggle animation:
 
-const boxes = document.getElementsByClassName("stairBox");
-let toggle = true; 
-document.getElementById("stairsToggle").addEventListener("click", toggleAnimation); 
+// const boxes = document.getElementsByClassName("stairBox");
+// let toggle = true; 
+// document.getElementById("stairsToggle").addEventListener("click", toggleAnimation); 
 
-function toggleAnimation() {
-    if (toggle == true) {
-        for (let i = 0; i < boxes.length; i++) {
-            boxes[i].style.animation = "none";
-        }
-        toggle = false;
-    } else {
-        for (let i = 0; i < boxes.length; i++) {
-            boxes[i].style.animation = "stairStrobe 1s linear infinite";
-        }
-        toggle = true;
-    }
-}
+// function toggleAnimation() {
+//     if (toggle == true) {
+//         for (let i = 0; i < boxes.length; i++) {
+//             boxes[i].style.animation = "none";
+//         }
+//         toggle = false;
+//     } else {
+//         for (let i = 0; i < boxes.length; i++) {
+//             boxes[i].style.animation = "stairStrobe 1s linear infinite";
+//         }
+//         toggle = true;
+//     }
+// }
