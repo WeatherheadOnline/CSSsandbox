@@ -498,6 +498,27 @@ h1, #Home a {color: #110539;}
 
 
 /* ***************************************** */    
+/* ********  Holographic section  ********** */
+/* ***************************************** */
+
+#holographic {
+    background-color: #222222;
+}
+
+#holographic, #holographic a {
+    color: #DDDDDD;
+}
+
+#holographicCard {
+    height: 50vh;
+    width: 50vw;
+    margin: 0 auto;
+    background-color: #0b7f72;
+}
+
+
+
+/* ***************************************** */    
 /* *******  Ogee pattern section  ********** */
 /* ***************************************** */
 
